@@ -88,7 +88,7 @@ function updateHistoryList() {
       searchHistory = JSON.parse(searchHistoryStr);
       let historyListHtml = "";
       for (let i = 0; i < searchHistory.length; i++) {
-        historyListHtml += `<li><button>${searchHistory[i]}</button></li>`;
+        historyListHtml += `<li><button style="background-color: lightgray; color: black">${searchHistory[i]}</button></li>`;
       }
       historyListEl.innerHTML = historyListHtml;
     }

@@ -69,14 +69,16 @@ header {
   #forecast {
     display: flex;
     flex-wrap: wrap;
+
     justify-content: space-between;
   }
   
   .forecast-item {
     flex-basis: calc(20% - 10px);
     margin-bottom: 20px;
-    background-color: blue;
+    background-color: rgb(3, 3, 78);
     color: whitesmoke;
+    border: 2px solid black;
   }
   
   .forecast-item h3 {
@@ -115,6 +117,11 @@ header {
   #city-input {
     border: 1px solid black;
   }
+
+  #historylist li button {
+    width: 100%;
+  }
+  
 
   /* Move search field, search button, and history to the left
 form {
