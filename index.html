@@ -12,6 +12,27 @@
 
 <header>Weather Dashboard</header>
 <body>
+    <div class="container">
+        <div class="search">
+          <form>
+            <h2>Search for a city:</h2>
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button type="submit" id="search-btn">Search</button>
+            
+          </form>
+          <br>
+          <div class="history">
+            
+            <h4>Previous searches:</h4>
+            <ul id="history-list"></ul>
+          </div>
+        </div>
+        <div class="weather">
+          <div id="current-weather"></div>
+          <div id="forecast"></div>
+        </div>
+       
+      </div>
     
     <script src="script.js"></script>
 </body>

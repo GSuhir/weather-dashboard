@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
 header {
     text-align: center;
     font-size: 50px;
@@ -5,4 +12,128 @@ header {
     background-color: blue;
     color: whitesmoke;
     padding: 20px;
+    margin-bottom: 10px;
 }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .search {
+    flex-basis: 30%;
+    margin-right: 0px;
+  }
+  
+  .search input {
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .search button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4c5baf;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .weather {
+    flex-basis: 70%;
+  }
+  
+  #current-weather {
+    margin-bottom: 20px;
+  }
+  
+  #current-weather h2 {
+    font-size: 36px;
+  }
+  
+  #current-weather img {
+    vertical-align: middle;
+  }
+  
+  #current-weather p {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  #forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .forecast-item {
+    flex-basis: calc(20% - 10px);
+    margin-bottom: 20px;
+    background-color: blue;
+    color: whitesmoke;
+  }
+  
+  .forecast-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .forecast-item img {
+    vertical-align: middle;
+  }
+  
+  .history {
+    flex-basis: 30%;
+  }
+  
+  .history h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .history li {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .history li:hover {
+    text-decoration: underline;
+  }
+
+  #city-input {
+    border: 1px solid black;
+  }
+
+  /* Move search field, search button, and history to the left
+form {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  #search-input {
+    margin-right: 10px;
+  }
+  
+  #search-button {
+    margin-right: 10px;
+  }
+  
+  #search-history {
+    margin-top: 10px;
+    padding-left: 0;
+    list-style-type: none;
+  } */
+  
+  
