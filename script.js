@@ -44,6 +44,8 @@ function getWeatherData(city) {
         <p>Temperature: ${temp} &deg;F</p>
         <p>Wind Speed: ${windSpeed} mph</p>
         <p>Humidity: ${humidity}%</p>
+        <br>
+        <h3>5-Day Forecast:</h3>
         
       `;
 
@@ -72,6 +74,7 @@ function getWeatherData(city) {
           </div>
         `;
       }
+      
       forecastEl.innerHTML = forecastHtml;
     })
     .catch(error => {

@@ -118,8 +118,8 @@ header {
     border: 1px solid black;
   }
 
-  #historylist li button {
-    width: 100%;
+  #history-list li button {
+    width: 80%;
   }
   
 
