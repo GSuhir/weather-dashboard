@@ -46,7 +46,7 @@ header {
   }
   
   .weather {
-    flex-basis: 70%;
+    flex-basis: 65%;
   }
   
   #current-weather {
@@ -123,24 +123,4 @@ header {
   }
   
 
-  /* Move search field, search button, and history to the left
-form {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  #search-input {
-    margin-right: 10px;
-  }
-  
-  #search-button {
-    margin-right: 10px;
-  }
-  
-  #search-history {
-    margin-top: 10px;
-    padding-left: 0;
-    list-style-type: none;
-  } */
-  
   
