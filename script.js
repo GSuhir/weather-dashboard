@@ -22,16 +22,15 @@ historyListEl.addEventListener("click", function(event) {
   getWeatherData(city);
 });
 
-// Get weather data from OpenWeatherMap API
+// Get weather data from OpenWeatherMap API, check if city is already present in search history, and add it to the end of the array if its not
 function getWeatherData(city) {
-  // Add city to search history
   if (!searchHistory.includes(city)) {
     searchHistory.push(city);
     localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
     updateHistoryList();
   }
 
-  // API request for current weather
+  // API GET request for current weather, then get city, date converted, icon, temp, humidity, windspeed
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`)
   .then(function(response) {
     return response.json();
@@ -50,7 +49,7 @@ function getWeatherData(city) {
       <p>Humidity: ${humidity}%</p>
       <br>
       <h3>5-Day Forecast:</h3>
-    `;
+`;
 
       // API request for 5-day forecast
       return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`);
@@ -59,7 +58,7 @@ function getWeatherData(city) {
         return response.json();
     })
     .then(function(data) {
-      // Display 5-day forecast data
+      // Display 5-day forecast data using a for loop with i+=8 because 5-day forecast is every 3 hours, so will get you forecast every 24 hours.
       let forecastHtml = "";
       for (let i = 0; i < data.list.length; i += 8) {
         var forecast = data.list[i];
@@ -82,12 +81,14 @@ function getWeatherData(city) {
       
       forecastEl.innerHTML = forecastHtml;
     })
-    
-    .catch(error => {
+  
+    //This handles any errors during execution of preceding promises
+    .catch(function(error) {
       console.log(error);
       currentWeatherEl.innerHTML = "<p>Please enter a city name!</p>";
       forecastEl.innerHTML = "";
     });
+    
 }
 
 // Update search history list from local storage
@@ -103,6 +104,6 @@ function updateHistoryList() {
     }
   }
   
-  // Initialize search history list on page refresh
+  // Initialize search history list when user refreshes page
   updateHistoryList();
   
